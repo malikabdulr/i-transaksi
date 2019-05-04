@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>I-Transaksi Mobile</title>
+  <!-- Favicon -->
+  <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- Argon CSS -->
+  <link type="text/css" href="assets/css/argon.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="index.html">
+        <h1>I-TRANSAKSI MOBILE</h1>
+      </a>
+      <!-- User -->
+      <ul class="nav align-items-center d-md-none">
+        
+      </ul>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="index.html">
+                <h3>I-TRANSAKSI MOBILE</h3>
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              <i class="ni ni-tv-2 text-primary"></i> Transaki
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="index.html">Tables</a>
+        <!-- Form -->
+        <!-- User -->
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+      <!-- Table -->
+      <!-- Dark table -->
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">i-transaksi</h3>
+              <div class="row">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-alt btn-sm btn-info" data-toggle="modal"
+                        data-target="#tambah">
+                        <i class="fa fa-plus"></i> Tambah Data
+                    </button>
+                </div>
+            </div>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table align-items-center table-dark table-flush">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID Transaksi</th>
+                    <th scope="col">Kode Transaksi</th>
+                    <th scope="col">ID Produk</th>
+                    <th scope="col">Harga Satuan</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Sum Harga</th>
+                    <th scope="col">Tanggal</th>
+                    <th scope="col">action</th>
+                  </tr>
+                </thead>
+                <tbody id="tampildata">
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              &copy; 2019 <a class="font-weight-bold ml-1" target="_blank">Creative Malik Abdul R</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--Modal Tambah-->
+  <div id="tambah" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h2 class="modal-title"><i class="fa fa-pencil"></i> Tambah Data</h2>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" id="form-tambah" enctype="multipart/form-data"
+                    class="form-horizontal form-bordered" onsubmit="return false;">
+                    <fieldset>
+                        <legend> Masukan Data Dengan Benar</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="id_produk">ID Transaki :</label>
+                            <div class="col-md-9">
+                                <input type="text" id="id" name="id" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="id_produk">Kode Transaksi :</label>
+                            <div class="col-md-9">
+                                <input type="text" id="idk" name="idk" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="id_produk">ID Produk :</label>
+                            <div class="col-md-9">
+                                <input type="text" id="idp" name="idp" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="id_produk">Harga Satuan :</label>
+                            <div class="col-md-9">
+                                <input type="text" id="harga" name="harga" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="id_produk">jumlah :</label>
+                            <div class="col-md-9">
+                                <input type="text" id="jumlah" name="jumlah" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="id_produk">sum harga :</label>
+                          <div class="col-md-9">
+                              <input type="text" id="sum" name="sum" class="form-control" placeholder="">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="id_produk">tanggal :</label>
+                        <div class="col-md-9">
+                            <input type="text" id="tgl" name="tgl" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                        <legend><small class="text-danger">Pastikan lagi Data yang di tambahkan sudah Benar</small>
+                        </legend>
+                    </fieldset>
+                    <div class="form-group form-actions">
+                        <div class="col-xs-12 text-right">
+                            <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-sm btn-primary" id="btn-tambah">Simpan</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="edit" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header text-center">
+              <h2 class="modal-title"><i class="fa fa-pencil"></i> Tambah Data</h2>
+          </div>
+          <div class="modal-body">
+              <form action="" method="post" id="form-edit" enctype="multipart/form-data"
+                  class="form-horizontal form-bordered" onsubmit="return false;">
+                  <fieldset>
+                      <legend> Masukan Data Dengan Benar</legend>
+                      <div class="form-group">
+                          <label class="col-md-3 control-label" for="id_produk">ID Transaki :</label>
+                          <div class="col-md-9">
+                              <input type="text" readonly id="ide" name="id" class="form-control" placeholder="">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-md-3 control-label" for="id_produk">Kode Transaksi :</label>
+                          <div class="col-md-9">
+                              <input type="text" id="idke" name="idk" class="form-control" placeholder="">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-md-3 control-label" for="id_produk">ID Produk :</label>
+                          <div class="col-md-9">
+                              <input type="text" id="idpe" name="idp" class="form-control" placeholder="">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-md-3 control-label" for="id_produk">Harga Satuan :</label>
+                          <div class="col-md-9">
+                              <input type="text" id="hargae" name="harga" class="form-control" placeholder="">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-md-3 control-label" for="id_produk">jumlah :</label>
+                          <div class="col-md-9">
+                              <input type="text" id="jumlahe" name="jumlah" class="form-control" placeholder="">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="id_produk">sum harga :</label>
+                        <div class="col-md-9">
+                            <input type="text" id="sume" name="sum" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="id_produk">tanggal :</label>
+                      <div class="col-md-9">
+                          <input type="date" id="tgle" name="tgl" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                      <legend><small class="text-danger">Pastikan lagi Data yang di tambahkan sudah Benar</small>
+                      </legend>
+                  </fieldset>
+                  <div class="form-group form-actions">
+                      <div class="col-xs-12 text-right">
+                          <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-sm btn-primary" id="btn-edit">Simpan</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Modal Tambah-->
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Argon JS -->
+  <script src="assets/js/argon.js?v=1.0.0"></script>
+ <script type="text/javascript">
+        $(document).ready(function () {
+            menampilkandata();
+            function menampilkandata()
+            {
+                $.ajax({
+                    url: "http://pkl.notaxcloth.com/tugas4/api/transaksi",
+                    type: "GET",
+                    dataType: "JSON",
+                    success: function(data) {
+                        console.log(data['data']);
+                        var no = 1;
+                        $.each(data['data'], function (i, field) {
+                            var id = field.id_transaksi;
+                            var idp = field.id_produk;
+                            var jumlah = field.jumlah;
+                            var kode = field.kode_transaksi;
+                            var sum = field.sum_harga;
+                            var tanggal = field.tanggal;
+                            var hargas = field.harga_satuan;
+                            $("#tampildata").append(`
+                                <tr>                  
+                                    <td class="text-center">` + id + `</td>
+                                    <td class="text-center">` + kode + `</td>
+                                    <td>` + idp + `</td>
+                                    <td>` + jumlah + `</td>
+                                    <td>` + hargas + `</td>
+                                    <td>` + sum + `</td>
+                                    <td class="text-center">` + tanggal + `</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-dark item_edit" name="item_edit" title="Edit" data-toggle="modal" id="` + id + `" onclick=""><i class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-info btn-sm item_hapus"  title="Hapus" data-toggle="modal"id="` + id + `"><i class="fa fa-times"></i></button>
+                                    </td>
+                                </tr> 
+                            `);                           
+                        });
+                        $('#tabeldata').DataTable(); 
+                    }
+                });
+                
+            }
+            $("#btn-tambah").click(function () {
+              var data = $("#form-tambah").serialize();
+              console.log(data);
+                $.ajax({
+                    url: "http://pkl.notaxcloth.com/tugas4/api/transaksi",
+                    type: "POST",
+                    data: $("#form-tambah").serialize(),
+                    dataType: "JSON",
+                    success: function (result) {
+                        if (result.status) {
+                            alert("Sukses, Data berhasil ditambahkan ER!!!!!!");
+                            $('#tambah').modal('hide');
+                            window.location.href =
+                            "index.html";
+                        } else {
+                            alert("Error, Data Gagal ditambahkan ER!!!!!");
+                        }
+                    },
+                    error: function (xhr, Status, err) {
+                        $("Data Kurang Lengkap : " + Status);
+                    }
+                });
+                return false;
+                });
+            $(document).on('click','.item_edit', function(){
+                var id = $(this).attr('id');
+                console.log(id);
+                $.ajax({
+                    type: "GET",
+                    url: "http://pkl.notaxcloth.com/tugas4/api/transaksi",
+                    dataType: "JSON",
+                    data: {
+                        id: id
+                    },
+                    success: function (data) {
+                        console.log(data['data']);
+                        $.each(data['data'], function (i,field) {
+                          var id = field.id_transaksi;
+                            var idp = field.id_produk;
+                            var jumlah = field.jumlah;
+                            var kode = field.kode_transaksi;
+                            var sum = field.sum_harga;
+                            var tanggal = field.tanggal;
+                            var hargas = field.harga_satuan;
+                            $('[id="ide"]').val(id);
+                            $('[id="idke"]').val(kode);
+                            $('[id="idpe"]').val(idp);
+                            $('[id="jumlahe"]').val(jumlah);
+                            $('[id="kodee"]').val(kode);
+                            $('[id="sume"]').val(sum);
+                            $('[id="tanggale"]').val(tanggal);
+                            $('[id="hargae"]').val(hargas);
+                        });
+                        $('#edit').modal('show');
+                    }
+                });
+            });
+            $(document).on('click','#btn-edit', function(){
+                var data =   $("#form-edit").serialize();
+                console.log(data);
+                $.ajax({
+                    url: "http://pkl.notaxcloth.com/tugas4/api/transaksi",
+                    type: "PUT",
+                    data: $("#form-edit").serialize(),
+                    dataType: "JSON",
+                    success: function (result) {
+                        if (result.status) {
+                            alert("Sukses, Data berhasil dirubah");
+                            $('#edit').modal('hide');
+                            window.location.href =
+                            "index.html";
+                        } else {
+                            alert("Error, Data Gagal dirubah");
+                        }
+                    },
+                    error: function (xhr, Status, err) {
+                      alert("Sukses, Data berhasil dirubah");
+                            $('#edit').modal('hide');
+                            window.location.href =
+                            "index.html";
+                    }
+                });
+                return false;
+                });
+            
+            $(document).on('click','.item_hapus', function(){
+              var id = $(this).attr('id');
+                console.log(id);
+                $.ajax({
+                    url: "http://pkl.notaxcloth.com/tugas4/api/transaksi",
+                    type: "DELETE",
+                    data: {
+                        id: id
+                    },
+                    dataType: "JSONP",
+                    success: function (result) {
+                        if (result.status) {
+                            alert("Sukses, Data berhasil dihapus");
+                            $('#hapus').modal('hide');
+                            window.location.href =
+                            "index.html";
+                        } else {
+                            alert("Error, Data Gagal dihapus");
+                        }
+                    },
+                    error: function (xhr, Status, err) {
+                        $("Data Kurang Lengkap : " + Status);
+                    }
+                });
+                return false;
+                });
+        });
+    </script>
+</body>
+
+</html>
