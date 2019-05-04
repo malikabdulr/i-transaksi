@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.contoh.helloappdb" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ERIJANCUK</name>
+    <name>I-TRANSAKSI</name>
     <description>
-        Aplikasi Bayar lah ER
+        Aplikasi Transaksi pembayaran
     </description>
     <author email="jejakdigital.com" href="">
     </author>
